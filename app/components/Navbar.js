@@ -1,28 +1,21 @@
 // app/components/Navbar.js
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
     <header className="nav">
       <div className="container nav-inner">
-        <a href="/" className="brand" aria-label="ECONOVA">
-          {/* Width/height grandes para evitar que Next lo “encajone” */}
-          <Image
-            src="/logo.svg"
-            alt="ECONOVA"
-            priority
-            width={360}
-            height={120}
-            className="logo"
-          />
-        </a>
+        <Link href="/" className="brand" aria-label="ECONOVA">
+          {/* <img> en lugar de <Image> para forzar tamaño por CSS */}
+          <img src="/logo.svg" alt="ECONOVA" className="logo-img" />
+        </Link>
 
         <nav className="menu" aria-label="Principal">
-          <a href="/servicios">Servicios</a>
-          <a href="/metodologia">Metodología</a>
-          <a href="/radar4">Radar4</a>
-          <a href="/faq">FAQ</a>
-          <a href="/contacto">Contacto</a>
+          <Link href="/servicios">Servicios</Link>
+          <Link href="/metodologia">Metodología</Link>
+          <Link href="/radar4">Radar4</Link>
+          <Link href="/faq">FAQ</Link>
+          <Link href="/contacto">Contacto</Link>
         </nav>
       </div>
     </header>
