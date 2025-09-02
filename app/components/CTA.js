@@ -1,17 +1,18 @@
 export default function CTA(){
   return (
     <section className="section">
-      <div className="container">
-        <div className="band">
+      <div className="container card" style={{background:'linear-gradient(135deg,#1e293b,#0f172a)'}}>
+        <div className="grid grid-2" data-animate>
           <div>
-            <div className="h2" style={{margin:0}}>¿Listos para acelerar su sostenibilidad?</div>
-            <p className="lead" style={{margin:'4px 0 0', color:'rgba(255,255,255,.85)'}}>
-              Un diagnóstico rápido y gratuito para priorizar acciones en 90 días.
-            </p>
+            <h2 className="h2">¿Listo para acelerar la certificación?</h2>
+            <p className="lead">Agenda un diagnóstico sin costo y recibe un plan de 45–60 minutos.</p>
           </div>
-          <a className="btn btn-primary" href="#contacto">Agendar diagnóstico</a>
+          <div className="btns" style={{alignSelf:'center',justifySelf:'end'}}>
+            <a className="btn btn-primary" href="#contacto">Agendar ahora</a>
+            <a className="btn btn-ghost" href="#faq">Resuelve dudas</a>
+          </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
