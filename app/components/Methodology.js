@@ -1,24 +1,22 @@
-const steps = [
-  {t:'1) Situación actual', d:'Levantamos información, indicadores y riesgos.'},
-  {t:'2) Mejora 90 días', d:'Quick wins de alto impacto y baja fricción.'},
-  {t:'3) Objetivo 12 meses', d:'Hoja de ruta con metas, responsables y métricas.'},
-  {t:'4) Auditoría & reporte', d:'Acompañamiento hasta certificación y publicación.'},
-];
-
 export default function Methodology(){
+  const steps = [
+    'Diagnóstico y matriz legal',
+    'Mapa de brechas y plan',
+    'Implementación & capacitación',
+    'Ejecución de controles y evidencias',
+    'Auditoría interna',
+    'Certificación y mejora continua'
+  ]
   return (
-    <section className="section" id="metodologia">
-      <div className="container">
-        <h2 className="h2">Metodología</h2>
+    <section id="metodologia" className="section container">
+      <h2 className="h2" data-animate>Metodología ECONOVA</h2>
+      <div className="card" data-animate>
         <div className="timeline">
           {steps.map((s,i)=>(
-            <div className="step" key={i}>
-              <b>{s.t}</b>
-              <span style={{color:'#64748b'}}>{s.d}</span>
-            </div>
+            <div key={i} className="step" data-step={i+1}><strong>{s}</strong></div>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
