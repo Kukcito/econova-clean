@@ -63,3 +63,64 @@ img{max-width:100%;display:block}
 
 /* Footer */
 .footer{background:#0f172a;color:#cbd5e1;padding:32px 0;margin-top:40px;border-top:1px solid rgba(255,255,255,.06)}
+/* === ECONOVA base === */
+:root{
+  --bg:#0f172a;         /* azul noche */
+  --fg:#0b1220;         /* azul más claro */
+  --brand:#22c55e;      /* verde marca */
+  --brand-700:#16a34a;
+  --text:#0f172a;
+  --muted:#64748b;
+  --white:#fff;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--text); line-height:1.5;}
+
+/* layout */
+.container{max-width:1120px;margin:0 auto;padding:0 16px}
+.section{padding:72px 0}
+
+/* headings */
+.h1{font-size:clamp(32px,5vw,48px);font-weight:800;margin:0 0 12px}
+.h2{font-size:clamp(24px,3.5vw,34px);font-weight:800;margin:0 0 8px}
+.lead{font-size:18px;color:var(--muted);margin:0 0 16px}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--bg),var(--fg));color:var(--white);padding:96px 0 72px}
+.hero .btn{border-color:rgba(255,255,255,.2)}
+.hero .muted{color:rgba(255,255,255,.8)}
+
+/* grid & cards */
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.grid-3 .card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:18px}
+@media (max-width:860px){.grid-3{grid-template-columns:1fr}}
+
+.kpi-value{font-size:32px;font-weight:900}
+.kpi-label{font-weight:600;color:var(--muted)}
+.kpi-note{font-size:12px;color:#94a3b8}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;border:1px solid #e2e8f0;text-decoration:none;color:var(--text);font-weight:700}
+.btn-primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-700);border-color:var(--brand-700)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.25)}
+
+/* services */
+.service{display:flex;gap:12px}
+.service h4{margin:0 0 6px;font-size:18px}
+.service p{margin:0;color:var(--muted)}
+
+/* timeline */
+.timeline{display:grid;gap:14px}
+.step{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:16px}
+.step b{display:block;margin-bottom:6px}
+
+/* band-cta */
+.band{background:var(--bg);color:#fff;border-radius:18px;padding:28px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+
+/* faq (nativo) */
+.faq details{border:1px solid #e2e8f0;border-radius:12px;padding:12px 14px;background:#fff}
+.faq summary{cursor:pointer;font-weight:700}
+.faq details p{margin:10px 0 0;color:var(--muted)}
