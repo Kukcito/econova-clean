@@ -80,4 +80,3 @@ export const faqs = [
   ['¿Dan capacitación?', 'Sí: microlearning, simulacros, roles y responsabilidades, cultura y adopción.'],
   ['¿Qué costo tiene el diagnóstico inicial?', 'El diagnóstico es **sin costo** y dura 45–60 minutos.']
 ];
-
