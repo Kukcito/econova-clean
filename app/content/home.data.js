@@ -1,4 +1,4 @@
-// STUB SEGURO TEMPORAL — compila siempre
+// stub seguro — compila siempre
 export const company = { name:'ECONOVA', mail:'contacto@econova.mx', phone:'', tagline:'', baseUrl:'' };
 
 export const about = {
