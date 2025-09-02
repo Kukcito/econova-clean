@@ -288,3 +288,50 @@ a{color:inherit}
   display: flex; align-items: center; justify-content: space-between;
   gap: 20px; padding: 0 20px;
 }
+:root{
+  /* Ajusta aquí el tamaño final que quieres ver */
+  --logo-h-m: 44px;   /* móvil */
+  --logo-h-d: 64px;   /* desktop (sube a 72px si quieres más grande) */
+
+  --nav-padding-x: 20px;
+  --nav-gap: 20px;
+}
+
+/* Contenedor del nav */
+.navbar{
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(8, 20, 37, 0.75);
+  backdrop-filter: blur(8px);
+}
+
+/* Estructura del nav */
+.nav-inner{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--nav-gap);
+  padding: 12px var(--nav-padding-x);   /* margen vertical del nav */
+}
+
+/* El ancla del logo */
+.brand{
+  display: flex; align-items: center; line-height: 0;
+}
+
+/* El logo en sí: altura manda, ancho se ajusta */
+.brand .logo-xl{
+  display: block;
+  height: var(--logo-h-m);
+  width: auto;
+}
+
+/* Desktop */
+@media (min-width: 768px){
+  .brand .logo-xl{ height: var(--logo-h-d); }
+}
+
+/* “Cortafuegos” por si hay otra regla anterior que lo limita */
+header.navbar .brand img.logo-xl{
+  max-height: none;
+}
