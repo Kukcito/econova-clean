@@ -1,3 +1,4 @@
+// app/page.js
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import KPIs from './components/KPIs';
@@ -9,7 +10,7 @@ import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-export default function Page(){
+export default function Page() {
   return (
     <main>
       <Navbar />
