@@ -22,6 +22,9 @@ export default function Page(){
           </div>
         </div>
       </section>
+import About from './components/About';
+import Clients from './components/Clients';
+import Cases from './components/Cases';
 
       <footer style={{background:'#0F172A',color:'#cbd5e1',padding:'32px 0',marginTop:40}}>
         <div className="container" style={{display:'flex',justifyContent:'space-between',gap:16}}>
