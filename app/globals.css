@@ -403,7 +403,7 @@ header.nav .brand img.logo{
 :root{
   /* Ajusta aquí las alturas del logo */
   --logo-h-m: 56px;   /* móvil */
-  --logo-h-d: 96px;   /* desktop (súbelo a 104/112 si quieres más presencia) */
+  --logo-h-d: 120px;   /* desktop (súbelo a 104/112 si quieres más presencia) */
 
   --nav-bg: rgba(8, 20, 37, 0.75);
   --nav-link: #cbd5e1;
