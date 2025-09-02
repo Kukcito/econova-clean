@@ -1,3 +1,76 @@
+/* ===========================
+   PALETA GLOBAL (TOKENS)
+   =========================== */
+:root{
+  /* Fondo y superficies */
+  --bg:        #0b1220;   /* fondo general (oscuro) */
+  --surface:   #101a2c;   /* tarjetas / navbar */
+  --surface-2: #0f172a;   /* variantes de superficie */
+
+  /* Texto */
+  --text:   #e2e8f0;
+  --muted:  #94a3b8;
+
+  /* Marca */
+  --primary:      #22c55e;  /* verde marca (botones / acentos) */
+  --primary-600:  #16a34a;
+  --primary-700:  #15803d;
+  --accent:       #0ea5e9;  /* azul acento */
+  --link:         #7dd3fc;
+
+  /* Efectos */
+  --ring:    0 0 0 3px rgba(34,197,94,.35);
+  --shadow-1: 0 10px 30px rgba(2,8,23,.45);
+}
+
+/* Normaliza colores base del sitio con los tokens */
+html, body{
+  background: var(--bg);
+  color: var(--text);
+}
+a{ color: var(--link); }
+a:hover{ color: var(--primary); }
+
+/* Botón primario usando tokens de marca */
+.btn-primary{
+  background: linear-gradient(90deg, var(--primary), #53e08b);
+  color: #03130a;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-weight: 700;
+  box-shadow: var(--shadow-1);
+  transition: transform .12s ease, box-shadow .2s ease, filter .2s ease;
+}
+.btn-primary:hover{
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-1), 0 0 0 2px rgba(34,197,94,.25) inset;
+}
+
+/* Botón secundario basado en acento */
+.btn-green{
+  background: transparent;
+  border: 1px solid rgba(148,163,184,.18);
+  color: var(--text);
+}
+.btn-green:hover{ border-color: rgba(148,163,184,.35); }
+
+/* Tarjetas / KPI cards con superficies y borde sutil */
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+  border: 1px solid rgba(148,163,184,.12);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(2,8,23,.25);
+}
+
+/* Navbar más elegante usando tokens */
+.navbar{
+  background: rgba(7,15,26,.66);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid rgba(148,163,184,.12);
+}
+
 /* === Reset simple === */
 *{box-sizing:border-box}
 html,body{height:100%}
