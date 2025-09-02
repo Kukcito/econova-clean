@@ -1,14 +1,9 @@
 export default function Footer(){
   return (
-    <footer id="contacto" className="footer">
-      <div className="container footer-grid">
-        <div>
-          <div className="brand b-invert">ECONOVA</div>
-          <p>© {new Date().getFullYear()} Econova. Todos los derechos reservados.</p>
-        </div>
-        <div className="footer-cta">
-          <a className="btn btn-primary" href="mailto:contacto@econova.mx">Escríbenos</a>
-        </div>
+    <footer className="footer">
+      <div className="container" style={{display:'flex',justifyContent:'space-between',gap:16}}>
+        <div><strong>ECONOVA</strong> · © {new Date().getFullYear()}</div>
+        <div style={{color:'#9fb3c8'}}>ISO 14001 / 45001 · GRI · ODS · Radar4</div>
       </div>
     </footer>
   );
