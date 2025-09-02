@@ -335,3 +335,67 @@ a{color:inherit}
 header.navbar .brand img.logo-xl{
   max-height: none;
 }
+/* ===== NAVBAR FIJO + LOGO GRANDE ===== */
+:root{
+  /* Ajusta aquí el tamaño final deseado */
+  --logo-h-m: 48px;   /* móvil */
+  --logo-h-d: 72px;   /* desktop */
+  --nav-py: 10px;     /* padding vertical del nav */
+  --nav-px: 20px;     /* padding horizontal del nav */
+  --nav-gap: 24px;
+}
+
+.nav{
+  position: sticky;
+  top: 0;
+  z-index: 1000;                         /* queda por delante del héroe */
+  background: rgba(8, 20, 37, 0.75);     /* tu tono */
+  backdrop-filter: blur(8px);
+}
+
+.nav-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--nav-py) var(--nav-px);
+  gap: var(--nav-gap);
+  min-height: calc(var(--logo-h-m) + 2*var(--nav-py));
+}
+
+.brand{ display: flex; align-items: center; line-height: 0; }
+.brand .logo{
+  display: block;
+  height: var(--logo-h-m);   /* manda la altura, el ancho se ajusta */
+  width: auto;
+}
+
+/* Menú siempre visible de base */
+.menu{
+  display: flex !important;              /* evita reglas previas que lo oculten */
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+}
+.menu a{
+  color: #cbd5e1;                        /* gris claro (ajústalo si quieres) */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: transform .15s ease, background-color .15s ease;
+}
+.menu a:hover{
+  background: rgba(148, 163, 184, 0.12);
+  transform: translateY(-1px);
+}
+
+/* Desktop: logo más grande y nav algo más alto */
+@media (min-width: 768px){
+  .brand .logo{ height: var(--logo-h-d); }
+  .nav-inner{ min-height: calc(var(--logo-h-d) + 2*var(--nav-py)); }
+}
+
+/* Cortafuegos contra reglas viejas tipo “.navbar img { max-height: 20px }” */
+header.nav .brand img.logo{
+  max-height: none !important;
+}
