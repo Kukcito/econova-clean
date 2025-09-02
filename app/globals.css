@@ -255,3 +255,36 @@ a{color:inherit}
 @media (min-width: 768px){
   .hero-wrap{ padding-top: 8px; }
 }
+/* ===== Tamaños del nav y del logo (editables) ===== */
+:root{
+  --nav-h-m: 72px;   /* altura navbar en mobile */
+  --logo-h-m: 40px;  /* altura logo en mobile */
+
+  --nav-h-d: 88px;   /* altura navbar en desktop */
+  --logo-h-d: 56px;  /* altura logo en desktop */
+}
+
+/* Navbar (usa los tokens de arriba) */
+.navbar{
+  height: var(--nav-h-m);
+}
+@media (min-width: 768px){
+  .navbar{ height: var(--nav-h-d); }
+}
+
+/* Logo: solo controlamos la altura; el ancho se ajusta */
+.brand img{
+  display: block;
+  height: var(--logo-h-m);
+  width: auto;
+}
+@media (min-width: 768px){
+  .brand img{ height: var(--logo-h-d); }
+}
+
+/* Alineación interna del nav (opcional si lo ves muy apretado) */
+.nav-inner{
+  height: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; padding: 0 20px;
+}
