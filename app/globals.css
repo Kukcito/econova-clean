@@ -80,3 +80,38 @@ a{color:inherit}
 /* === On-view reveal === */
 [data-animate]{opacity:0;transform:translateY(12px);transition:opacity .5s ease, transform .5s ease}
 [data-animate].in{opacity:1;transform:none}
+/* Tamaños del logo y comportamiento con scroll */
+.navbar .logo{
+  display:flex;
+  align-items:center;
+  width: 220px;                   /* 👈 logo GRANDE en desktop */
+  transition: width .25s ease;
+}
+
+.navbar.is-scrolled .logo{
+  width: 160px;                   /* 👈 reduce al hacer scroll */
+}
+
+@media (max-width: 1024px){
+  .navbar .logo{ width: 190px; }
+}
+@media (max-width: 768px){
+  .navbar .logo{ width: 170px; }
+}
+@media (max-width: 640px){
+  .navbar .logo{ width: 150px; }
+}
+
+/* Opcional: navbar con blur fino y más contraste de marca */
+.navbar{
+  background: rgba(7,15,26,.66);
+  backdrop-filter: saturate(180%) blur(10px);
+}
+
+/* Asegura que el hero no quede oculto por el navbar más alto */
+.hero-wrap{
+  padding-top: 120px;             /* si tu navbar es sticky y más alto */
+}
+@media (max-width: 768px){
+  .hero-wrap{ padding-top: 100px; }
+}
