@@ -1,26 +1,20 @@
 export default function KPIs(){
+  const items = [
+    {value:'-35%', label:'Incidentes en 12 meses'},
+    {value:'+25%', label:'Cumplimiento efectivo'},
+    {value:'90 días', label:'Promedio a auditoría'},
+  ]
   return (
-    <section className="section">
-      <div className="container">
-        <h2 className="h2">KPIs</h2>
-        <div className="grid-3">
-          <div className="card">
-            <div className="kpi-value">-35%</div>
-            <div className="kpi-label">Incidentes</div>
-            <div className="kpi-note">en 12 meses</div>
+    <section className="section container">
+      <h2 className="h2" data-animate>Impacto probado</h2>
+      <div className="grid grid-3">
+        {items.map((k,i)=>(
+          <div className="card kpi" key={i} data-animate>
+            <div className="value">{k.value}</div>
+            <div className="label">{k.label}</div>
           </div>
-          <div className="card">
-            <div className="kpi-value">+25%</div>
-            <div className="kpi-label">Cumplimiento efectivo</div>
-            <div className="kpi-note">en auditorías</div>
-          </div>
-          <div className="card">
-            <div className="kpi-value">90 días</div>
-            <div className="kpi-label">Tiempo a auditoría</div>
-            <div className="kpi-note">promedio de implementación</div>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
-  );
+  )
 }
