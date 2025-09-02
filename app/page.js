@@ -1,27 +1,13 @@
 // app/page.js
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import KPIs from './components/KPIs';
-import Services from './components/Services';
-import Methodology from './components/Methodology';
-import Radar4 from './components/Radar4';
-import CTA from './components/CTA';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 
+// 👇 de momento, SOLO Navbar y Footer.
+// Lo demás lo iremos reactivando poco a poco.
 export default function Page() {
   return (
     <main>
       <Navbar />
-      <Hero />
-      <KPIs />
-      <Services />
-      <Methodology />
-      <Radar4 />
-      <CTA />
-      <FAQ />
-      <Contact />
       <Footer />
     </main>
   );
