@@ -5,6 +5,12 @@ import Why from './components/Why';
 import Services from './components/Services';
 import Methodology from './components/Methodology';
 import Radar4 from './components/Radar4';
+import About from './components/About';
+import Clients from './components/Clients';
+import Cases from './components/Cases';
+import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
+import CTA from './components/CTA';
 import Footer from './components/Footer';
 
 export default function Page(){
@@ -17,6 +23,12 @@ export default function Page(){
       <Services />
       <Methodology />
       <Radar4 />
+      <About />
+      <Clients />
+      <Cases />
+      <Testimonials />
+      <FAQ />
+      <CTA />
       <Footer />
     </>
   );
