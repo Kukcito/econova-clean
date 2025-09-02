@@ -399,3 +399,74 @@ header.navbar .brand img.logo-xl{
 header.nav .brand img.logo{
   max-height: none !important;
 }
+/* ====== Navbar fijo con logo grande y menú bonito ====== */
+:root{
+  /* Ajusta aquí las alturas del logo */
+  --logo-h-m: 56px;   /* móvil */
+  --logo-h-d: 96px;   /* desktop (súbelo a 104/112 si quieres más presencia) */
+
+  --nav-bg: rgba(8, 20, 37, 0.75);
+  --nav-link: #cbd5e1;
+  --nav-link-hover: #e2e8f0;
+}
+
+.nav{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(148,163,184,0.08);
+}
+
+/* Si tu .container tiene ancho controlado, perfecto; si no, añade uno */
+.nav .nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 32px;
+  padding: 12px 24px;
+  min-height: calc(var(--logo-h-m) + 24px);
+}
+
+.brand{ display:flex; align-items:center; line-height:0; }
+
+/* LOGO: se manda por CSS, pase lo que pase dentro del SVG */
+.logo-img{
+  display:block;
+  height: var(--logo-h-m) !important;
+  width: auto !important;
+}
+
+/* Desktop: logo más grande */
+@media (min-width: 900px){
+  .logo-img{ height: var(--logo-h-d) !important; }
+  .nav .nav-inner{ min-height: calc(var(--logo-h-d) + 24px); }
+}
+
+/* MENÚ: flex + gap + tipografía */
+.menu{
+  margin-left:auto;
+  display:flex !important;               /* evita reglas viejas que lo oculten */
+  align-items:center;
+  gap: 28px;
+}
+
+.menu a{
+  color: var(--nav-link);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: background .2s, color .2s, transform .15s;
+}
+.menu a:hover{
+  color: var(--nav-link-hover);
+  background: rgba(148,163,184,.12);
+  transform: translateY(-1px);
+}
+
+/* Cortafuegos contra resets viejos tipo “header img { max-height: 20px }” */
+header.nav img.logo-img{ max-height:none !important; }
