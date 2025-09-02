@@ -1,23 +1,20 @@
-const faqs = [
-  {q:'¿Trabajan con sector público y privado?', a:'Sí. Tenemos experiencias en fuerzas públicas y en industria, con marcos ODS/GRI.'},
-  {q:'¿Cuánto tarda un proyecto?', a:'Definimos quick wins a 90 días y un objetivo integral a 12 meses.'},
-  {q:'¿Pueden ayudar con auditorías?', a:'Sí, pre-auditoría, cierre de brechas y acompañamiento durante el proceso.'},
-];
-
 export default function FAQ(){
+  const q = [
+    ['¿Trabajan con sector público y privado?', 'Sí. Hemos acompañado fuerzas públicas, industria de manufactura y servicios.'],
+    ['¿Cuánto tarda una certificación?', 'En promedio 90 días, dependiendo del punto de partida y recursos.'],
+    ['¿Qué entregables recibo?', 'Plan de acciones, matriz legal, radar de priorización, evidencias y tablero ejecutivo.'],
+  ]
   return (
-    <section className="section">
-      <div className="container">
-        <h2 className="h2">Preguntas frecuentes</h2>
-        <div className="faq" style={{display:'grid',gap:10}}>
-          {faqs.map((f,i)=>(
-            <details key={i}>
-              <summary>{f.q}</summary>
-              <p>{f.a}</p>
-            </details>
-          ))}
-        </div>
+    <section id="faq" className="section container">
+      <h2 className="h2" data-animate>Preguntas frecuentes</h2>
+      <div className="grid grid-2">
+        {q.map(([t,a],i)=>(
+          <details key={i} className="card" data-animate>
+            <summary style={{cursor:'pointer',fontWeight:800}}>{t}</summary>
+            <p className="lead" style={{marginTop:6}}>{a}</p>
+          </details>
+        ))}
       </div>
     </section>
-  );
+  )
 }
