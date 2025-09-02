@@ -1,0 +1,10 @@
+:root { --font-inter: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: var(--font-inter); background:#fff; color:#0f172a; }
+img { display:block; max-width:100%; height:auto; }
+@media (max-width: 768px) {
+  main { padding: 48px 16px; }
+  h1 { font-size: 28px !important; }
+  section { grid-template-columns: 1fr !important; }
+}
