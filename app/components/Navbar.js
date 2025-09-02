@@ -1,30 +1,22 @@
-'use client';
-import { useEffect, useState } from 'react';
+// app/components/Navbar.js
+import Image from "next/image";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll(); // estado correcto si entras ya scrolleado
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
   return (
-    <header className={`navbar ${scrolled ? 'is-scrolled' : ''}`}>
-      <div className="nav-inner container">
-        <a className="brand" href="/">
-          <img src="/logo.svg" alt="ECONOVA" />
+    <header className="navbar">
+      <div className="nav-inner">
+        <a href="/" className="brand" aria-label="ECONOVA">
+          <Image
+            src="/logo.svg"
+            alt="ECONOVA"
+            priority
+            width={280}   // ancho de referencia (puedes subir a 320–360)
+            height={64}   // alto de referencia
+            className="logo-xl"
+          />
         </a>
 
-        <nav className="nav-links">
-          <a href="/servicios">Servicios</a>
-          <a href="/metodologia">Metodología</a>
-          <a href="/radar4">Radar4</a>
-          <a href="/faq">FAQ</a>
-          <a href="/contacto">Contacto</a>
-        </nav>
+        {/* ...tu menú... */}
       </div>
     </header>
   );
