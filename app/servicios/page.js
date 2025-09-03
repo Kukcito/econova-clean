@@ -81,3 +81,21 @@ export default function Servicios() {
     </section>
   );
 }
+<h2 className="h2" style={{ marginTop: 32 }}>Cobertura sectorial</h2>
+<p>
+  Trabajamos en manufactura, logística, construcción, alimentos y bebidas, energía, pharma
+  y sector público. Adaptamos los entregables al lenguaje del negocio para acelerar
+  decisiones y asegurar continuidad operativa.
+</p>
+
+<h2 className="h2" style={{ marginTop: 24 }}>Casos de referencia</h2>
+<div className="grid-2" style={{ marginTop: 12 }}>
+  <div className="card">
+    <b>Manufactura pesada</b>
+    <p>Certificación ISO 45001 en 8 meses con programa de cultura y tablero único; -32% incidentes en 12 meses.</p>
+  </div>
+  <div className="card">
+    <b>Retail multisitio</b>
+    <p>Homologación legal en 180 tiendas; inspecciones más ágiles, multas evitadas y narrativa ESG unificada.</p>
+  </div>
+</div>
