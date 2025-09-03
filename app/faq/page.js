@@ -28,3 +28,18 @@ export default function FAQ() {
     </section>
   );
 }
+<h2 className="h2" style={{ marginTop: 32 }}>Más preguntas</h2>
+<div className="grid-2" style={{ marginTop: 12 }}>
+  <div className="card">
+    <b>¿Pueden trabajar por etapas?</b>
+    <p>Sí: diagnóstico → quick wins → implementación → auditoría → reporte ESG.</p>
+    <b>¿Firmas NDA?</b>
+    <p>Sí, tratamos la información como confidencial desde la primera conversación.</p>
+  </div>
+  <div className="card">
+    <b>¿Cómo se integra con mis sistemas?</b>
+    <p>Importamos desde Excel, Google, ERPs y CMMS; exportamos reportes y datasets.</p>
+    <b>¿Qué KPI veré primero?</b>
+    <p>Incidentes, cierre de CAPAs, cumplimiento legal y exposición por área/sitio.</p>
+  </div>
+</div>
