@@ -18,9 +18,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body>
-        <OnView />      {/* 👈 ahora todas las páginas activan las animaciones */}
-        {children}
+        <Navbar />
+        <main className="page">{children}</main>
+        <Footer />
       </body>
     </html>
-  )
+  );
 }
