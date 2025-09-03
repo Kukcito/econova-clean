@@ -1,34 +1,38 @@
-// app/layout.js
 import './globals.css'
+
+// IMPORTA SOLO ESTOS DOS COMPONENTES (default export):
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import OnView from './components/OnView'
 
+// opcional: evita warning de metadataBase
 export const metadata = {
-  title: 'ECONOVA — Sostenibilidad y Seguridad',
+  title: 'ECONOVA — Sostenibilidad & Seguridad',
   description:
-    'ISO 14001 / ISO 45001, informes GRI y Radar4. Protegemos vidas, fortalecemos instituciones y creamos valor medible.',
+    'ISO 14001 / ISO 45001 • GRI • ODS • Radar4. Sostenibilidad y Seguridad basadas en datos.',
+  metadataBase: new URL('https://econova-clean.vercel.app'), // ajusta a tu dominio final
   icons: { icon: '/favicon.ico' },
   openGraph: {
     title: 'ECONOVA',
     description:
-      'Sostenibilidad y Seguridad basadas en datos. ISO 14001 / 45001, GRI, Radar4.',
-    url: 'https://econova-site.vercel.app',
-    type: 'website',
+      'ISO 14001 / ISO 45001 • GRI • ODS • Radar4. Decisiones por impacto.',
     images: ['/og.jpg'],
+    url: 'https://econova-clean.vercel.app',
+    type: 'website',
   },
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className="no-js">{/* ← Fallback inicial */}
+    <html lang="es">
       <body>
+        {/* HEADER ÚNICO */}
         <Navbar />
-        {/* Compensa el header fijo/sticky con padding-top en .page */}
+
+        {/* EL CONTENIDO DE CADA RUTA */}
         <main className="page">{children}</main>
+
+        {/* FOOTER ÚNICO */}
         <Footer />
-        {/* Activa animaciones y quita el fallback */}
-        <OnView />
       </body>
     </html>
   )
