@@ -470,3 +470,28 @@ header.nav .brand img.logo{
 
 /* Cortafuegos contra resets viejos tipo “header img { max-height: 20px }” */
 header.nav img.logo-img{ max-height:none !important; }
+:root{
+  /* ALTURA DEL HEADER */
+  --nav-h: 80px;              /* puedes subir a 88–96 si te gusta más alto */
+
+  /* Colores base legibles en fondo oscuro */
+  --bg: #0b1624;
+  --fg: #e7f0ff;
+  --muted: #9fb3c8;
+}
+
+/* Fondo + color por defecto */
+html, body { background: var(--bg); color: var(--fg); }
+
+/* El header queda arriba de todo, pero sin tapar el contenido */
+.nav { position: sticky; top: 0; z-index: 1000; }
+
+/* Empuja todo el contenido para que no quede detrás del header */
+.page { padding-top: var(--nav-h); }
+
+/* Tipografía legible por si algo heredó color raro */
+.page h1, .page h2, .page h3, .page p, .page li { color: var(--fg); }
+
+/* Secciones con aire */
+.section { padding: 56px 0; }
+@media (min-width: 900px){ .section { padding: 72px 0; } }
