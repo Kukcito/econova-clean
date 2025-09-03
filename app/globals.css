@@ -258,3 +258,20 @@ p{ line-height:1.8; color:var(--fg); }
 @media (min-width: 900px){
   .logo-img { height: var(--logo-h-d) !important; }
 }
+/* Animación de entrada */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  will-change: opacity, transform;
+  transition: opacity .6s ease-out, transform .6s ease-out;
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fallback si no hay IntersectionObserver */
+body.no-io .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
