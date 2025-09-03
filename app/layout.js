@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body>
         <Navbar />
+        {/* 👇 esto deja hueco bajo el header sticky */}
         <main className="page">{children}</main>
         <Footer />
       </body>
