@@ -1,45 +1,49 @@
 // app/page.js
 import Image from "next/image";
 
+export const metadata = { title: "ECONOVA — Sostenibilidad que protege y agrega valor" };
+
 export default function Home() {
   return (
     <>
-      {/* HERO */}
-      <section className="section hero-wrap" aria-label="Hero">
+      {/* HERO con imagen */}
+      <section className="section hero-wrap">
         <div className="container hero-content">
-          <p className="lead">Sostenibilidad & Seguridad basadas en datos</p>
-          <h1 className="h1" style={{ maxWidth: 980 }}>
-            Sostenibilidad que protege vidas y agrega valor
-          </h1>
-          <p className="lead" style={{ maxWidth: 720 }}>
-            Convertimos medio ambiente y seguridad en motor de competitividad
-            real: diagnósticos rápidos, estandarización ISO, reporting GRI y
-            priorización con Radar4 para ejecutar lo que más impacta.
-          </p>
+          <div style={{ display:"grid", gap:16 }}>
+            <p className="lead">Sostenibilidad & Seguridad basadas en datos</p>
+            <h1 className="h1" style={{ maxWidth: 980 }}>
+              Protegemos vidas, fortalecemos instituciones y creamos valor medible.
+            </h1>
+            <p className="lead" style={{ maxWidth: 760 }}>
+              Convertimos medio ambiente y seguridad en un motor real de competitividad:
+              diagnóstico rápido, implementación ISO 14001/45001, reporting GRI y
+              priorización con <strong>Radar4</strong> para ejecutar lo que más impacta.
+            </p>
+            <div style={{ display:"flex", gap:12, flexWrap:"wrap", marginTop:4 }}>
+              <a className="btn btn-green" href="/contacto">Agendar diagnóstico</a>
+              <a className="btn" href="/radar4">Ver Radar4 en acción</a>
+            </div>
+          </div>
 
-          <div style={{ display: "flex", gap: 12, marginTop: 20, flexWrap:"wrap" }}>
-            <a className="btn btn-green" href="/contacto">Agendar diagnóstico</a>
-            <a className="btn" href="/radar4">Ver <strong>Radar4</strong> en acción</a>
+          {/* Hero visual */}
+          <div style={{ marginTop: 24 }}>
+            <Image
+              src="/media/hero.jpg"
+              alt="Operación segura y sostenible"
+              width={1400}
+              height={800}
+              className="img-fluid"
+              priority
+            />
           </div>
 
           {/* KPIs */}
-          <div className="kpi-grid" style={{ marginTop: 28 }}>
-            <div className="card">
-              <h3 className="h2" style={{ margin: 0 }}>-35%</h3>
-              <p className="lead" style={{ margin: 0 }}>Incidentes</p>
-            </div>
-            <div className="card">
-              <h3 className="h2" style={{ margin: 0 }}>+25%</h3>
-              <p className="lead" style={{ margin: 0 }}>Madurez HSE</p>
-            </div>
-            <div className="card">
-              <h3 className="h2" style={{ margin: 0 }}>90 días</h3>
-              <p className="lead" style={{ margin: 0 }}>Resultados</p>
-            </div>
+          <div className="kpi-grid" style={{ marginTop: 24 }}>
+            <div className="card"><h3 className="h2" style={{margin:0}}>-35%</h3><p className="lead" style={{margin:0}}>Incidentes</p></div>
+            <div className="card"><h3 className="h2" style={{margin:0}}>+25%</h3><p className="lead" style={{margin:0}}>Madurez HSE</p></div>
+            <div className="card"><h3 className="h2" style={{margin:0}}>90 días</h3><p className="lead" style={{margin:0}}>Resultados visibles</p></div>
           </div>
         </div>
-        <div className="hero-bg" />
-        <div className="hero-shapes" />
       </section>
 
       {/* SERVICIOS + GALERÍA */}
@@ -49,168 +53,115 @@ export default function Home() {
             <div>
               <h2 className="h2">Servicios para acelerar tu sostenibilidad</h2>
               <p className="lead">
-                Diseñamos, implementamos y operamos sistemas que protegen
-                personas y medio ambiente, entregan evidencia y <strong>crean valor
-                medible</strong> en el negocio.
+                Diseñamos, implementamos y operamos sistemas que protegen personas y medio
+                ambiente. Entregamos evidencia y <strong>valor medible</strong> con auditorías exitosas.
               </p>
 
               <div className="grid-3" style={{ marginTop: 16 }}>
                 <div className="card">
-                  <b>01 · Diagnóstico</b>
+                  <b>01 · Diagnóstico & Gap</b>
                   <p style={{ marginTop: 8 }}>
-                    Assessment integral, entrevistas, revisión documental,
-                    matriz legal aplicable y mapa de brechas con priorización
-                    por riesgo/impacto.
+                    Línea base con entrevistas, recorridos y revisión documental. Mapa de brechas
+                    y matriz legal aplicable con prioridad por riesgo/impacto y costo/beneficio.
                   </p>
                 </div>
                 <div className="card">
-                  <b>02 · Implementación</b>
+                  <b>02 · ISO 14001/45001</b>
                   <p style={{ marginTop: 8 }}>
-                    ISO 14001/45001, programas, capacitación y operación con
-                    tablero de indicadores.
+                    Procedimientos, capacitación, controles operativos, auditorías internas y
+                    acompañamiento a auditor externo. Tablero de indicadores y estandarización.
                   </p>
                 </div>
                 <div className="card">
-                  <b>03 · Reporting & mejora</b>
+                  <b>03 · ESG, GRI & ODS</b>
                   <p style={{ marginTop: 8 }}>
-                    Informes GRI/ESG, ODS, auditorías internas y mejora
-                    continua con Radar4.
+                    Levantamiento y aseguramiento de datos multisede, materialidad, y reportes
+                    que comunican impacto a stakeholders con narrativa clara de negocio.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Galería responsive (img-fluid evita desbordes) */}
+            {/* Galería: nunca desborda por .img-fluid y grids minmax */}
             <div className="grid-3">
               <figure className="card" style={{ padding: 10 }}>
-                <Image
-                  src="/media/diag.jpg"
-                  width={620} height={420} alt="Diagnóstico en planta"
-                  className="img-fluid"
-                />
-                <figcaption className="lead" style={{ marginTop: 8 }}>
-                  Diagnóstico rápido de brechas
-                </figcaption>
+                <Image src="/media/diag.jpg" alt="Diagnóstico en planta" width={620} height={420} className="img-fluid" />
+                <figcaption className="lead" style={{ marginTop: 8 }}>Diagnóstico rápido de brechas</figcaption>
               </figure>
               <figure className="card" style={{ padding: 10 }}>
-                <Image
-                  src="/media/iso.jpg"
-                  width={620} height={420} alt="ISO 14001 / 45001"
-                  className="img-fluid"
-                />
-                <figcaption className="lead" style={{ marginTop: 8 }}>
-                  Implementación ISO 14001/45001
-                </figcaption>
+                <Image src="/media/iso.jpg" alt="ISO 14001/45001" width={620} height={420} className="img-fluid" />
+                <figcaption className="lead" style={{ marginTop: 8 }}>Implementación ISO 14001/45001</figcaption>
               </figure>
               <figure className="card" style={{ padding: 10 }}>
-                <Image
-                  src="/media/ods.jpg"
-                  width={620} height={420} alt="GRI y ODS"
-                  className="img-fluid"
-                />
-                <figcaption className="lead" style={{ marginTop: 8 }}>
-                  Informes GRI y ODS para stakeholders
-                </figcaption>
+                <Image src="/media/ods.jpg" alt="Informes GRI y ODS" width={620} height={420} className="img-fluid" />
+                <figcaption className="lead" style={{ marginTop: 8 }}>Informes GRI y ODS</figcaption>
               </figure>
             </div>
           </div>
         </div>
       </section>
 
-      {/* RADAR4 */}
-      <section className="section" id="radar4">
+      {/* BLOQUE RADAR4 con imagen alusiva */}
+      <section className="section" id="radar4-home">
         <div className="container grid-2">
           <div>
-            <h2 className="h2">Prioriza con Radar4 impactos y decisiones</h2>
+            <h2 className="h2">Radar4: decide con datos y prioriza lo que más impacta</h2>
             <p className="lead">
-              Un modelo de priorización que convierte cientos de hallazgos en
-              una <strong>lista accionable</strong> según riesgo, costo, beneficio y tiempo.
+              Radar4 transforma hallazgos dispersos en un <strong>backlog ejecutable</strong> con ROI,
+              riesgo residual, costo y responsables. Elimina el ruido y orienta inversión.
             </p>
             <ul style={{ marginTop: 10, paddingLeft: 18 }}>
-              <li>Visibilidad de riesgos ejecutables en un tablero único.</li>
-              <li>Análisis ROI para cada iniciativa.</li>
-              <li>Justificables ante consejo/finanzas.</li>
-              <li>Simulación de escenarios y quick wins en 90 días.</li>
+              <li>Simulación de escenarios (presupuesto, plazo, riesgo residual).</li>
+              <li>Quick wins en 90 días con evidencia para auditorías y comité.</li>
+              <li>Transparencia (99% trazabilidad) y narrativa para finanzas.</li>
             </ul>
+            <div style={{ marginTop: 14 }}>
+              <a className="btn btn-green" href="/radar4">Conocer Radar4</a>
+            </div>
           </div>
-          <div className="grid-3">
-            <div className="card"><b>37%</b><p className="lead" style={{ marginTop: 6 }}>reducción de exposición en 6 meses</p></div>
-            <div className="card"><b>15%</b><p className="lead" style={{ marginTop: 6 }}>ahorro por decisiones mejor informadas</p></div>
-            <div className="card"><b>99%</b><p className="lead" style={{ marginTop: 6 }}>trazabilidad y evidencia de cumplimiento</p></div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTORES */}
-      <section className="section" id="sectores">
-        <div className="container">
-          <h2 className="h2">Sectores y contextos donde entregamos impacto</h2>
-          <div className="grid-4" style={{ marginTop: 16 }}>
-            {[
-              "Industria & manufactura",
-              "Energía y minería",
-              "Construcción & infraestructura",
-              "Retail & logística",
-              "Alimentos & bebidas",
-              "Salud y pharma",
-              "Educación & campus",
-              "Gobierno",
-            ].map((t) => (
-              <div className="card" key={t}>
-                <b>{t}</b>
-                <p style={{ marginTop: 6 }}>
-                  Casos reales con reducción de incidentes, mejora de indicadores
-                  y auditorías exitosas.
-                </p>
-              </div>
-            ))}
+          <div className="card" style={{ padding: 10 }}>
+            <Image
+              src="/media/radar4.jpg"
+              alt="Vista de Radar4 priorizando iniciativas"
+              width={1200}
+              height={750}
+              className="img-fluid"
+            />
           </div>
         </div>
       </section>
 
-      {/* RESULTADOS */}
+      {/* RESULTADOS + TESTIMONIOS (extendido) */}
       <section className="section" id="resultados">
         <div className="container">
           <h2 className="h2">Resultados recientes con impacto tangible</h2>
           <div className="grid-3" style={{ marginTop: 16 }}>
             <div className="card">
-              <b>Corporativo industrial · 3 plantas</b>
+              <b>Holding manufactura · 3 plantas</b>
               <p style={{ marginTop: 6 }}>
-                -41% incidentes en 10 meses, certificación ISO 45001 y reporte
-                GRI alineado a ODS 3, 8 y 12.
+                -41% incidentes en 10 meses; certificación ISO 45001; tablero de
+                KPIs con desviaciones y CAPAs integradas; reporte GRI alineado a ODS 3, 8 y 12.
               </p>
             </div>
             <div className="card">
               <b>Operador logístico · 12 sitios</b>
               <p style={{ marginTop: 6 }}>
-                Estandarización HSE, tablero y quick wins con payback &lt; 90 días.
+                Estandarización HSE, entrenamiento y quick wins con payback &lt; 90 días.
+                Disminución de multas y mejores inspecciones.
               </p>
             </div>
             <div className="card">
               <b>Alimentos y bebidas</b>
               <p style={{ marginTop: 6 }}>
-                Roadmap de inversión con ROI &gt; 18% en 12 meses.
+                Roadmap de inversión priorizado; ROI &gt; 18% anual; auditorías
+                más ágiles con evidencia centralizada y narrativa ESG clara.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* TESTIMONIOS */}
-      <section className="section" id="testimonios">
-        <div className="container grid-2">
-          <div className="card">
-            <p>“Pasamos de iniciativas sueltas a un <strong>roadmap</strong> claro… Radar4 nos ordenó.”</p>
-            <p className="lead">— Directora HSE, holding industrial</p>
-          </div>
-          <div className="card">
-            <p>“Certificamos ISO y comunicamos ESG sin fricción. Ahora sabemos <strong>qué priorizar</strong>.”</p>
-            <p className="lead">— CFO, logística nacional</p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA FINAL */}
+      {/* CTA */}
       <section className="section">
         <div className="container">
           <div className="card" style={{ display:"flex", gap:16, alignItems:"center", justifyContent:"space-between", flexWrap:"wrap" }}>
