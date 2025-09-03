@@ -1,98 +1,69 @@
-export const metadata = {
-  title: 'Servicios | ECONOVA',
-  description:
-    'Portafolio integral: diagnóstico, ISO 14001/45001, reportes GRI y priorización con Radar4 para generar valor medible.',
-};
+export const metadata = { title: 'Servicios | ECONOVA' }
 
 export default function Page() {
   return (
-    <article className="container section">
-      <header className="center" style={{ marginBottom: '2rem' }}>
-        <h1>Servicios para acelerar tu sostenibilidad</h1>
+    <section className="section">
+      <div className="container">
+        <h1 className="h1">Servicios para acelerar tu sostenibilidad</h1>
         <p className="lead">
-          Diseñamos, implementamos y operamos sistemas que <strong>protegen personas y medio ambiente</strong>, cumplen con normas internacionales y <strong>crean valor medible</strong>.
-        </p>
-      </header>
-
-      <section className="section">
-        <h2>Portafolio integral</h2>
-        <p>
-          Te acompañamos de punta a punta: diagnóstico, diseño, implementación, operación y mejora continua. Nuestros entregables se basan en evidencia y quedan documentados para auditorías y toma de decisiones.
+          Diseñamos, implementamos y operamos sistemas que protegen personas y medio ambiente,
+          entregan evidencia confiable y convierten la sostenibilidad en ventaja competitiva.
         </p>
 
-        <div className="grid-2">
+        <div className="grid-2" style={{marginTop:24}}>
           <div className="card">
-            <h3>Diagnóstico & Gap Assessment</h3>
+            <h2 className="h3">Diagnóstico & Gap Assessment</h2>
             <p>
-              Mapeo de brechas contra <strong>ISO 14001</strong>, <strong>ISO 45001</strong> y <strong>GRI</strong>. Identificamos <em>quick wins</em> y riesgos críticos.
+              Levantamiento integral, entrevistas y revisión documental para establecer línea base.
+              Entregamos un mapa de brechas priorizadas con plan de acción táctico y quick wins (30–45 días).
             </p>
             <ul>
-              <li>Entrevistas, revisión documental y visitas a sitio</li>
-              <li>Matriz legal aplicable y evidencias</li>
-              <li>Plan priorizado por <strong>impacto</strong> y <strong>riesgo</strong></li>
-              <li>Duración típica: 2–3 semanas</li>
+              <li>Assessment 2–3 semanas</li>
+              <li>Matriz legal aplicable y criticidad</li>
+              <li>Plan táctico y tablero de seguimiento</li>
             </ul>
           </div>
 
           <div className="card">
-            <h3>Implementación ISO 14001 / 45001</h3>
-            <p>Construimos tu Sistema de Gestión con procesos, controles, formatos y tableros listos para auditoría.</p>
+            <h2 className="h3">ISO 14001 / 45001</h2>
+            <p>
+              Implementación end-to-end, manuales, procedimientos, formación y auditorías internas.
+              Migramos tu operación a un sistema vivo, con roles claros y evidencias auditables.
+            </p>
             <ul>
-              <li>Mapa de procesos, riesgos y controles</li>
-              <li>Procedimientos, registros y capacitación</li>
-              <li>KPIs y evidencias de cumplimiento</li>
-              <li>Acompañamiento a auditorías</li>
+              <li>Diseño del SGA/SST y despliegue</li>
+              <li>Formación por rol y simulacros</li>
+              <li>Preparación para certificación</li>
             </ul>
           </div>
 
           <div className="card">
-            <h3>Informes GRI & datos ESG</h3>
-            <p>Estructuramos tu reporte con materialidad, límites, métricas y trazabilidad.</p>
+            <h2 className="h3">Informes GRI & Estrategia ODS</h2>
+            <p>
+              Materialidad, mapeo de stakeholders, indicadores y narrativa. Convertimos resultados
+              en reputación y en decisiones de negocio con foco en materialidad real.
+            </p>
             <ul>
-              <li>Estudio de materialidad y matriz de temas</li>
-              <li>Data dictionary y gobierno del dato</li>
-              <li>Narrativa y visualizaciones ejecutivas</li>
-              <li>Revisión de verificador independiente</li>
+              <li>GRI Standards (Core/Comprehensive)</li>
+              <li>Vinculación con ODS prioritarios</li>
+              <li>Tablero ejecutivo y repositorio</li>
             </ul>
           </div>
 
           <div className="card">
-            <h3>Radar4 — Priorización por impacto</h3>
-            <p>Optimiza el orden de trabajo según <strong>impacto, esfuerzo, riesgo</strong> y <strong>madurez</strong>.</p>
+            <h2 className="h3">Radar4: priorización por impacto</h2>
+            <p>
+              Modelo de decisión que pondera riesgo, costo y beneficio. Reduce 35% incidentes
+              en 12 meses y aumenta 25% la madurez HSE con foco en evidencias.
+            </p>
             <ul>
-              <li>Score por iniciativa y portafolio</li>
-              <li>Simulaciones “qué pasaría si…”</li>
-              <li>Roadmap 90 días + 12 meses</li>
-              <li>Panel ejecutivo y operativo</li>
+              <li>Visibilidad de riesgos accionables</li>
+              <li>Justificables ante comité</li>
+              <li>Integración con tu BI</li>
             </ul>
           </div>
         </div>
-      </section>
-
-      <section className="section">
-        <h2>Sectores con mayor impacto</h2>
-        <p className="lead">Industria de procesos, energía, logística, alimentación, bienes de consumo y sector público.</p>
-        <ul>
-          <li><strong>Manufactura y alimentos:</strong> residuos, agua, energía, seguridad en planta.</li>
-          <li><strong>Energía y utilities:</strong> permisos, emisiones, integridad de activos.</li>
-          <li><strong>Logística y retail:</strong> cadena de suministro, trazabilidad, salud y seguridad.</li>
-          <li><strong>Gobierno:</strong> cumplimiento regulatorio, transparencia e indicadores.</li>
-        </ul>
-      </section>
-
-      <section className="section">
-        <h2>Indicadores de éxito</h2>
-        <div className="kpi-grid">
-          <div className="card"><h3>-35%</h3><p>Incidentes en 12 meses</p></div>
-          <div className="card"><h3>+25%</h3><p>Cumplimiento efectivo</p></div>
-          <div className="card"><h3>-18%</h3><p>Costos por sanciones/reprocesos</p></div>
-          <div className="card"><h3>90 días</h3><p>Tiempo promedio a auditoría</p></div>
-        </div>
-      </section>
-
-      <footer className="section center">
-        <a className="btn btn-green" href="/contacto">Agendar diagnóstico sin costo</a>
-      </footer>
-    </article>
-  );
+      </div>
+    </section>
+  )
 }
