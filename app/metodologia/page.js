@@ -1,4 +1,3 @@
-// app/metodologia/page.js
 export const metadata = { title: "Metodología — ECONOVA" };
 
 export default function Metodologia() {
@@ -7,41 +6,41 @@ export default function Metodologia() {
       <div className="container">
         <h1 className="h1">Metodología basada en evidencia</h1>
         <p className="lead">
-          Integramos estándares internacionales, marcos regulatorios y
-          analítica para convertir hallazgos en **decisiones**: priorizar,
-          planear y ejecutar.
+          Combinamos estándares internacionales, marcos regulatorios y analítica
+          de decisiones para convertir hallazgos en acciones con ROI y reducción
+          de riesgo.
         </p>
 
         <div className="grid-3" style={{ marginTop: 16 }}>
           <div className="card">
             <b>1) Descubrir</b>
             <p>
-              Entrevistas, recorridos, revisión documental y levantamiento
-              de datos para construir la línea base.
+              Levantamiento de datos, entrevistas, recorridos, auditorías en sitio
+              y revisión documental para construir la línea base real.
             </p>
           </div>
           <div className="card">
             <b>2) Priorizar</b>
             <p>
-              Matriz de riesgo/impacto y simulación de escenarios con
-              <i> trade-offs </i> costo/beneficio/tiempo en Radar4.
+              Matriz de riesgo/impacto, estimación de costos y beneficios, y
+              simulación de escenarios en Radar4 con restricciones reales.
             </p>
           </div>
           <div className="card">
             <b>3) Ejecutar</b>
             <p>
-              Roadmap con dueños y metas trimestrales. Tablero de
-              indicadores y auditorías internas.
+              Roadmap trimestral con dueños, metas y tablero. Auditorías internas
+              y mejora continua.
             </p>
           </div>
         </div>
 
         <h2 className="h2" style={{ marginTop: 32 }}>Entregables</h2>
         <ul>
-          <li>Mapa de brechas, matriz legal aplicable y plan de cierre.</li>
-          <li>Procedimientos, formatos y evidencias listas para auditor.</li>
-          <li>Tablero de indicadores y reporte ejecutivo mensual.</li>
-          <li>Reporte GRI y alineación a ODS prioritarios.</li>
+          <li>Mapa de brechas y matriz legal aplicable.</li>
+          <li>Backlog priorizado con ROI estimado y quick wins.</li>
+          <li>Procedimientos, formatos y evidencias listas.</li>
+          <li>Reporte ejecutivo y narrativa ESG/GRI lista para stakeholders.</li>
         </ul>
       </div>
     </section>
