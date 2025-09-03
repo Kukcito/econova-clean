@@ -1,12 +1,10 @@
 // app/layout.js
 import './globals.css';
 
-// importa los componentes que sí usas en el layout
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 export const metadata = {
-  // pon aquí el dominio real de tu proyecto
   metadataBase: new URL('https://econova-clean.vercel.app'),
   title: { default: 'ECONOVA', template: '%s — ECONOVA' },
   description:
