@@ -17,13 +17,9 @@ export default function Home() {
             priorización con Radar4 para ejecutar lo que más impacta.
           </p>
 
-          <div style={{ display: "flex", gap: 12, marginTop: 20 }}>
-            <a className="btn btn-green" href="/contacto">
-              Agendar diagnóstico
-            </a>
-            <a className="btn" href="/radar4">
-              Ver <strong>Radar4</strong> en acción
-            </a>
+          <div style={{ display: "flex", gap: 12, marginTop: 20, flexWrap:"wrap" }}>
+            <a className="btn btn-green" href="/contacto">Agendar diagnóstico</a>
+            <a className="btn" href="/radar4">Ver <strong>Radar4</strong> en acción</a>
           </div>
 
           {/* KPIs */}
@@ -42,8 +38,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* Fondo suave (usa tu gradiente actual) */}
         <div className="hero-bg" />
         <div className="hero-shapes" />
       </section>
@@ -56,8 +50,8 @@ export default function Home() {
               <h2 className="h2">Servicios para acelerar tu sostenibilidad</h2>
               <p className="lead">
                 Diseñamos, implementamos y operamos sistemas que protegen
-                personas y medio ambiente, entregan evidencia y **crean valor
-                medible** en el negocio.
+                personas y medio ambiente, entregan evidencia y <strong>crean valor
+                medible</strong> en el negocio.
               </p>
 
               <div className="grid-3" style={{ marginTop: 16 }}>
@@ -86,14 +80,13 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Galería toques “pro” */}
+            {/* Galería responsive (img-fluid evita desbordes) */}
             <div className="grid-3">
               <figure className="card" style={{ padding: 10 }}>
                 <Image
                   src="/media/diag.jpg"
-                  width={620}
-                  height={420}
-                  alt="Diagnóstico en planta"
+                  width={620} height={420} alt="Diagnóstico en planta"
+                  className="img-fluid"
                 />
                 <figcaption className="lead" style={{ marginTop: 8 }}>
                   Diagnóstico rápido de brechas
@@ -102,9 +95,8 @@ export default function Home() {
               <figure className="card" style={{ padding: 10 }}>
                 <Image
                   src="/media/iso.jpg"
-                  width={620}
-                  height={420}
-                  alt="ISO 14001 / 45001"
+                  width={620} height={420} alt="ISO 14001 / 45001"
+                  className="img-fluid"
                 />
                 <figcaption className="lead" style={{ marginTop: 8 }}>
                   Implementación ISO 14001/45001
@@ -113,9 +105,8 @@ export default function Home() {
               <figure className="card" style={{ padding: 10 }}>
                 <Image
                   src="/media/ods.jpg"
-                  width={620}
-                  height={420}
-                  alt="GRI y ODS"
+                  width={620} height={420} alt="GRI y ODS"
+                  className="img-fluid"
                 />
                 <figcaption className="lead" style={{ marginTop: 8 }}>
                   Informes GRI y ODS para stakeholders
@@ -126,16 +117,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* RADAR4 BENEFICIOS */}
+      {/* RADAR4 */}
       <section className="section" id="radar4">
         <div className="container grid-2">
           <div>
             <h2 className="h2">Prioriza con Radar4 impactos y decisiones</h2>
             <p className="lead">
               Un modelo de priorización que convierte cientos de hallazgos en
-              una **lista accionable** según riesgo, costo, beneficio y tiempo.
+              una <strong>lista accionable</strong> según riesgo, costo, beneficio y tiempo.
             </p>
-
             <ul style={{ marginTop: 10, paddingLeft: 18 }}>
               <li>Visibilidad de riesgos ejecutables en un tablero único.</li>
               <li>Análisis ROI para cada iniciativa.</li>
@@ -143,26 +133,10 @@ export default function Home() {
               <li>Simulación de escenarios y quick wins en 90 días.</li>
             </ul>
           </div>
-
           <div className="grid-3">
-            <div className="card">
-              <b>37%</b>
-              <p className="lead" style={{ marginTop: 6 }}>
-                reducción de exposición en 6 meses
-              </p>
-            </div>
-            <div className="card">
-              <b>15%</b>
-              <p className="lead" style={{ marginTop: 6 }}>
-                ahorro por decisiones mejor informadas
-              </p>
-            </div>
-            <div className="card">
-              <b>99%</b>
-              <p className="lead" style={{ marginTop: 6 }}>
-                trazabilidad y evidencia de cumplimiento
-              </p>
-            </div>
+            <div className="card"><b>37%</b><p className="lead" style={{ marginTop: 6 }}>reducción de exposición en 6 meses</p></div>
+            <div className="card"><b>15%</b><p className="lead" style={{ marginTop: 6 }}>ahorro por decisiones mejor informadas</p></div>
+            <div className="card"><b>99%</b><p className="lead" style={{ marginTop: 6 }}>trazabilidad y evidencia de cumplimiento</p></div>
           </div>
         </div>
       </section>
@@ -194,11 +168,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* RESULTADOS / CASOS */}
+      {/* RESULTADOS */}
       <section className="section" id="resultados">
         <div className="container">
           <h2 className="h2">Resultados recientes con impacto tangible</h2>
-
           <div className="grid-3" style={{ marginTop: 16 }}>
             <div className="card">
               <b>Corporativo industrial · 3 plantas</b>
@@ -210,15 +183,13 @@ export default function Home() {
             <div className="card">
               <b>Operador logístico · 12 sitios</b>
               <p style={{ marginTop: 6 }}>
-                Estandarización de procesos HSE, tablero de indicadores y quick
-                wins con payback &lt; 90 días.
+                Estandarización HSE, tablero y quick wins con payback &lt; 90 días.
               </p>
             </div>
             <div className="card">
               <b>Alimentos y bebidas</b>
               <p style={{ marginTop: 6 }}>
-                Identificación de riesgos críticos y roadmap de inversión con
-                ROI &gt; 18% en 12 meses.
+                Roadmap de inversión con ROI &gt; 18% en 12 meses.
               </p>
             </div>
           </div>
@@ -229,17 +200,11 @@ export default function Home() {
       <section className="section" id="testimonios">
         <div className="container grid-2">
           <div className="card">
-            <p>
-              “Pasamos de iniciativas sueltas a un **roadmap** claro que previene
-              incidentes y justifica decisiones con datos. Radar4 nos ordenó.”
-            </p>
+            <p>“Pasamos de iniciativas sueltas a un <strong>roadmap</strong> claro… Radar4 nos ordenó.”</p>
             <p className="lead">— Directora HSE, holding industrial</p>
           </div>
           <div className="card">
-            <p>
-              “Logramos certificar ISO y comunicar ESG sin fricción. La
-              dirección entiende ahora **qué priorizar y por qué**.”
-            </p>
+            <p>“Certificamos ISO y comunicamos ESG sin fricción. Ahora sabemos <strong>qué priorizar</strong>.”</p>
             <p className="lead">— CFO, logística nacional</p>
           </div>
         </div>
@@ -248,14 +213,11 @@ export default function Home() {
       {/* CTA FINAL */}
       <section className="section">
         <div className="container">
-          <div className="card" style={{ display: "flex", gap: 16, alignItems: "center", justifyContent: "space-between" }}>
+          <div className="card" style={{ display:"flex", gap:16, alignItems:"center", justifyContent:"space-between", flexWrap:"wrap" }}>
             <div>
-              <h3 className="h3" style={{ marginBottom: 6 }}>
-                ¿Listo para bajar incidentes y comunicar valor?
-              </h3>
+              <h3 className="h3" style={{ marginBottom: 6 }}>¿Listo para bajar incidentes y comunicar valor?</h3>
               <p className="lead" style={{ margin: 0 }}>
-                Agenda un diagnóstico sin costo. En 45–60 min definimos
-                siguientes pasos y quick wins.
+                Agenda un diagnóstico sin costo. En 45–60 min definimos pasos y quick wins.
               </p>
             </div>
             <a className="btn btn-green" href="/contacto">Agendar ahora</a>
