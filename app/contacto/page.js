@@ -19,3 +19,15 @@ export default function Contacto() {
     </section>
   );
 }
+<h2 className="h2" style={{ marginTop: 32 }}>Proceso de arranque</h2>
+<ol>
+  <li>Sesión de entendimiento (45–60 min) y NDA si aplica.</li>
+  <li>Propuesta con alcance, tiempos y costos (3–5 días hábiles).</li>
+  <li>Inicio de diagnóstico y cronograma acordado.</li>
+</ol>
+
+<h2 className="h2" style={{ marginTop: 24 }}>Ámbito</h2>
+<p>
+  Atendemos México y LATAM en modalidad híbrida. Para plantas fuera de zona metropolitana,
+  planificamos ventanas técnicas con anticipación.
+</p>
