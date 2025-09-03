@@ -46,3 +46,15 @@ export default function Metodologia() {
     </section>
   );
 }
+<h2 className="h2" style={{ marginTop: 32 }}>Gobernanza y calidad</h2>
+<ul>
+  <li>Control de versiones y trazabilidad de cambios en documentos.</li>
+  <li>Checklist de calidad por entregable y aceptación formal con responsables.</li>
+  <li>Lecciones aprendidas por trimestre y actualización de riesgos.</li>
+</ul>
+
+<h2 className="h2" style={{ marginTop: 24 }}>Equipo y roles</h2>
+<p>
+  Consultores con experiencia en HSE, sistemas de gestión, analítica y facilitación
+  de talleres ejecutivos. Alineamos lenguaje técnico con finanzas para cerrar agendas.
+</p>
