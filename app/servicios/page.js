@@ -1,4 +1,3 @@
-// app/servicios/page.js
 export const metadata = { title: "Servicios — ECONOVA" };
 
 export default function Servicios() {
@@ -7,56 +6,75 @@ export default function Servicios() {
       <div className="container">
         <h1 className="h1">Servicios para acelerar tu sostenibilidad</h1>
         <p className="lead">
-          Nuestro enfoque combina diagnóstico, implementación y operación
-          continúa para asegurar resultados en **90 días** y un camino claro
-          a certificaciones, cumplimiento y valor.
+          Enfocamos cada proyecto a resultados en 90 días. Integramos diagnóstico,
+          implementación y operación continua para que HSE/ESG sea una palanca
+          de competitividad, no sólo cumplimiento.
         </p>
 
         <div className="grid-3" style={{ marginTop: 16 }}>
           <div className="card">
             <h2 className="h3">Diagnóstico & Gap Assessment</h2>
             <ul>
-              <li>Entrevistas, recorridos en sitio y revisión documental.</li>
-              <li>Matriz legal aplicable y mapa de brechas.</li>
-              <li>Prioridad por riesgo/impacto, costo y tiempo.</li>
-              <li>Quick wins con dueños, fechas y costo estimado.</li>
+              <li>Entrevistas, recorridos, revisión documental, línea base.</li>
+              <li>Matriz legal aplicable y mapa de brechas con riesgo/impacto.</li>
+              <li>Priorización costo/beneficio/tiempo y dueños por iniciativa.</li>
+              <li>Quick wins con cronograma y costo estimado.</li>
             </ul>
+            <p>
+              Entregamos un reporte ejecutivo claro para dirección y un backlog
+              accionable para operación.
+            </p>
           </div>
+
           <div className="card">
             <h2 className="h3">ISO 14001 / 45001</h2>
             <ul>
-              <li>Políticas, procedimientos, formatos y controles.</li>
-              <li>Capacitación y evidencias listas para auditor.</li>
-              <li>Auditorías internas y acompañamiento externo.</li>
-              <li>Tablero de indicadores operativos/HSE.</li>
+              <li>Diseño e implementación de políticas, procedimientos y formatos.</li>
+              <li>Capacitación, simulacros, mediciones y controles operativos.</li>
+              <li>Auditorías internas y acompañamiento a auditor externo.</li>
+              <li>Tablero de indicadores y programa anual de mejora.</li>
             </ul>
+            <p>
+              Dejamos evidencias listas y una operación sostenible en el tiempo.
+            </p>
           </div>
+
           <div className="card">
             <h2 className="h3">ESG, GRI & ODS</h2>
             <ul>
-              <li>Levantamiento y aseguramiento de datos.</li>
-              <li>Materialidad y relacionamiento con stakeholders.</li>
-              <li>Reportes GRI, anexos y línea base para rating ESG.</li>
+              <li>Levantamiento y aseguramiento de datos multisede.</li>
+              <li>Materialidad y relación con stakeholders.</li>
+              <li>Reporte GRI y narrativa de impacto alineada a ODS.</li>
               <li>Integración a Radar4 para seguimiento trimestral.</li>
             </ul>
           </div>
         </div>
 
-        <h2 className="h2" style={{ marginTop: 32 }}>Paquetes típicos</h2>
+        <h2 className="h2" style={{ marginTop: 32 }}>Paquetes y ejemplos</h2>
         <div className="grid-2" style={{ marginTop: 16 }}>
           <div className="card">
             <b>Fast-track 90 días</b>
             <p>
-              Diagnóstico, quick wins, tablero y plan de inversión
-              priorizado. Ideal para “poner la casa en orden”.
+              Diagnóstico, quick wins, tablero y plan de inversión priorizado.
+              Ideal para “poner la casa en orden” y demostrar resultados visibles.
             </p>
+            <ul>
+              <li>Reducción de incidentes 10–25% promedio.</li>
+              <li>Backlog ejecutable con dueños y fechas.</li>
+              <li>Base para certificación y reporte ESG.</li>
+            </ul>
           </div>
           <div className="card">
             <b>Certificación 6–9 meses</b>
             <p>
-              Implementación completa ISO 14001/45001 y
-              fortalecimiento HSE con auditorías internas.
+              Implementación completa ISO 14001/45001 con auditorías internas,
+              operación estabilizada y transferencia de conocimiento.
             </p>
+            <ul>
+              <li>Procesos estándar y evidencias robustas.</li>
+              <li>Capacitación y cultura de seguridad.</li>
+              <li>Mejora continua con Radar4.</li>
+            </ul>
           </div>
         </div>
       </div>
