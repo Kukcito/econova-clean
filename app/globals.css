@@ -315,3 +315,6 @@ html.no-js .reveal{ opacity:1 !important; transform:none !important; }
 /* ===== Header arriba y contenido compensado ===== */
 .nav{ position: fixed; top:0; left:0; right:0; z-index:1100; }
 .page{ padding-top: var(--nav-h); } /* Asegúrate que --nav-h esté definido */
+.prose { max-width: 80ch; }
+.prose p { margin: 0 0 14px; }
+.prose h3 { margin-top: 16px; }
