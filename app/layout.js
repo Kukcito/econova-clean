@@ -1,18 +1,27 @@
-import './globals.css'
-import OnView from './components/OnView'   // 👈 importa el observador global
+// app/layout.js
+import './globals.css';
+
+// importa los componentes que sí usas en el layout
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 export const metadata = {
-  title: 'ECONOVA — Sostenibilidad que crea valor',
-  description: 'ISO 14001 / ISO 45001 · GRI · ODS · Radar4.',
+  // pon aquí el dominio real de tu proyecto
+  metadataBase: new URL('https://econova-clean.vercel.app'),
+  title: { default: 'ECONOVA', template: '%s — ECONOVA' },
+  description:
+    'ISO 14001 / ISO 45001 · Informes GRI · ODS · Radar4 para decisiones basadas en datos.',
   icons: { icon: '/favicon.ico' },
   openGraph: {
     title: 'ECONOVA',
-    description: 'Sostenibilidad que protege vidas y crea valor.',
-    images: ['/og.jpg'],
-    url: 'https://econova-site.vercel.app',
-    type: 'website'
-  }
-}
+    description:
+      'Sostenibilidad que protege vidas, fortalece instituciones y crea valor medible.',
+    url: 'https://econova-clean.vercel.app',
+    siteName: 'ECONOVA',
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'ECONOVA' }],
+    type: 'website',
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
