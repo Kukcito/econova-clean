@@ -1,37 +1,27 @@
 import './globals.css'
-
-// IMPORTA SOLO ESTOS DOS COMPONENTES (default export):
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
-// opcional: evita warning de metadataBase
 export const metadata = {
-  title: 'ECONOVA — Sostenibilidad & Seguridad',
-  description:
-    'ISO 14001 / ISO 45001 • GRI • ODS • Radar4. Sostenibilidad y Seguridad basadas en datos.',
-  metadataBase: new URL('https://econova-clean.vercel.app'), // ajusta a tu dominio final
-  icons: { icon: '/favicon.ico' },
+  metadataBase: new URL('https://econova-clean.vercel.app'), // ajusta si usas otro dominio
+  title: 'ECONOVA — Sostenibilidad que protege vidas y crea valor',
+  description: 'ISO 14001 / 45001 · GRI · ODS · Radar4 para priorizar acciones por impacto.',
   openGraph: {
     title: 'ECONOVA',
-    description:
-      'ISO 14001 / ISO 45001 • GRI • ODS • Radar4. Decisiones por impacto.',
-    images: ['/og.jpg'],
+    description: 'Sostenibilidad que protege vidas y crea valor medible.',
     url: 'https://econova-clean.vercel.app',
     type: 'website',
+    images: ['/og.jpg'],
   },
+  icons: [{ rel: 'icon', url: '/favicon.ico' }],
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body>
-        {/* HEADER ÚNICO */}
         <Navbar />
-
-        {/* EL CONTENIDO DE CADA RUTA */}
         <main className="page">{children}</main>
-
-        {/* FOOTER ÚNICO */}
         <Footer />
       </body>
     </html>
