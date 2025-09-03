@@ -1,47 +1,36 @@
-// app/layout.js
 import './globals.css'
-import OnView from './components/OnView' // tu observer (ok)
-import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-  display: 'swap',
-})
-const display = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  variable: '--font-display',
-  display: 'swap',
-})
+import OnView from './components/OnView'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 export const metadata = {
   title: 'ECONOVA — Sostenibilidad que crea valor',
-  description: 'ISO 14001 / ISO 45001 · GRI · ODS · Radar4.',
+  description: 'ISO 14001 / ISO 45001 · GRI · ODS · Radar4',
   icons: { icon: '/favicon.ico' },
   openGraph: {
     title: 'ECONOVA',
     description: 'Sostenibilidad que protege vidas y crea valor.',
-    images: ['/og.jpg'],
     url: 'https://econova-site.vercel.app',
     type: 'website',
+    images: ['/og.jpg'],
   },
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className={`${inter.variable} ${display.variable}`}>
-      <body className="page">
-        {/* El Navbar y Footer los montas dentro del layout global */}
+    <html lang="es">
+      <body>
+        {/* Header Fijo */}
         <Navbar />
-        <main>{children}</main>
+
+        {/* Compensa altura de header */}
+        <main className="page">{children}</main>
+
         <Footer />
-        {/* Observer de apariciones si lo usas */}
+
+        {/* Activa animaciones reveal */}
         <OnView />
       </body>
     </html>
   )
 }
-
-// Nota: Importa tus componentes reales
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
