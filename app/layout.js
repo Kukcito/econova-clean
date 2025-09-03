@@ -1,35 +1,47 @@
 // app/layout.js
-import './globals.css';
+import './globals.css'
+import OnView from './components/OnView' // tu observer (ok)
+import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+})
+const display = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+})
 
 export const metadata = {
-  metadataBase: new URL('https://econova-clean.vercel.app'),
-  title: { default: 'ECONOVA', template: '%s — ECONOVA' },
-  description:
-    'ISO 14001 / ISO 45001 · Informes GRI · ODS · Radar4 para decisiones basadas en datos.',
+  title: 'ECONOVA — Sostenibilidad que crea valor',
+  description: 'ISO 14001 / ISO 45001 · GRI · ODS · Radar4.',
   icons: { icon: '/favicon.ico' },
   openGraph: {
     title: 'ECONOVA',
-    description:
-      'Sostenibilidad que protege vidas, fortalece instituciones y crea valor medible.',
-    url: 'https://econova-clean.vercel.app',
-    siteName: 'ECONOVA',
-    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'ECONOVA' }],
+    description: 'Sostenibilidad que protege vidas y crea valor.',
+    images: ['/og.jpg'],
+    url: 'https://econova-site.vercel.app',
     type: 'website',
   },
-};
+}
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
-      <body>
+    <html lang="es" className={`${inter.variable} ${display.variable}`}>
+      <body className="page">
+        {/* El Navbar y Footer los montas dentro del layout global */}
         <Navbar />
-        {/* 👇 esto deja hueco bajo el header sticky */}
-        <main className="page">{children}</main>
+        <main>{children}</main>
         <Footer />
+        {/* Observer de apariciones si lo usas */}
+        <OnView />
       </body>
     </html>
-  );
+  )
 }
+
+// Nota: Importa tus componentes reales
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
