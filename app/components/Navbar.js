@@ -1,23 +1,20 @@
 // app/components/Navbar.js
-import Link from "next/link";
-
 export default function Navbar() {
   return (
-    <header className="nav">
+    <nav className="nav">
       <div className="container nav-inner">
-        <Link href="/" className="brand" aria-label="ECONOVA">
-          {/* <img> en lugar de <Image> para forzar tamaño por CSS */}
+        <a href="/" aria-label="ECONOVA">
           <img src="/logo.svg" alt="ECONOVA" className="logo-img" />
-        </Link>
+        </a>
 
-        <nav className="menu" aria-label="Principal">
-          <Link href="/servicios">Servicios</Link>
-          <Link href="/metodologia">Metodología</Link>
-          <Link href="/radar4">Radar4</Link>
-          <Link href="/faq">FAQ</Link>
-          <Link href="/contacto">Contacto</Link>
-        </nav>
+        <div className="menu">
+          <a href="/servicios">Servicios</a>
+          <a href="/metodologia">Metodología</a>
+          <a href="/radar4">Radar4</a>
+          <a href="/faq">FAQ</a>
+          <a href="/contacto">Contacto</a>
+        </div>
       </div>
-    </header>
+    </nav>
   );
 }
