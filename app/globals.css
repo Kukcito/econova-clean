@@ -305,3 +305,13 @@ body.no-io .reveal {
   display: grid; gap: 22px; grid-template-columns: 1fr;
 }
 @media (min-width: 900px){ .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+/* ===== Fallback para que el home SIEMPRE se vea ===== */
+.reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.in{ opacity:1; transform:none; }
+
+/* Si todavía no cargó JS o falla el observer, que se vean igual */
+html.no-js .reveal{ opacity:1 !important; transform:none !important; }
+
+/* ===== Header arriba y contenido compensado ===== */
+.nav{ position: fixed; top:0; left:0; right:0; z-index:1100; }
+.page{ padding-top: var(--nav-h); } /* Asegúrate que --nav-h esté definido */
