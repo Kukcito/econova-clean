@@ -1,39 +1,21 @@
-// app/page.js
-import Hero from './components/Hero';
-import Services from './components/Services';
-import Methodology from './components/Methodology';
-import Radar4 from './components/Radar4';
-
-import About from './components/About';
-import Compliance from './components/Compliance';
-import Sectors from './components/Sectors';
-import Cases from './components/Cases';
-import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
-import Media from './components/Media'; // opcional
+export const metadata = { title: 'ECONOVA — Inicio' }
 
 export default function Page() {
   return (
-    <>
-      <Hero />
-      <Services />
-      <Methodology />
-      <Radar4 />
+    <section className="section">
+      <div className="container">
+        <h1 className="h1">Sostenibilidad que protege vidas y agrega valor</h1>
+        <p className="lead">
+          Convertimos medio ambiente y seguridad en motor de competitividad real.
+        </p>
 
-      {/* Bloques extensos */}
-      <About />
-      <Compliance />
-      <Sectors />
-      <Cases />
-      <Testimonials />
-
-      {/* Galería opcional */}
-      <Media />
-
-      {/* Cierre */}
-      <FAQ />
-      <Contact />
-    </>
-  );
+        <div className="kpi-grid" style={{marginTop:24}}>
+          <div className="card"><h3 className="h3">-35%</h3><p>Incidentes</p></div>
+          <div className="card"><h3 className="h3">+25%</h3><p>Madurez HSE</p></div>
+          <div className="card"><h3 className="h3">90 días</h3><p>Resultados</p></div>
+          <div className="card"><h3 className="h3">12</h3><p>ODS que abordamos</p></div>
+        </div>
+      </div>
+    </section>
+  )
 }
