@@ -224,3 +224,37 @@ p{ line-height:1.8; color:var(--fg); }
 .center{text-align:center;}
 .grid-2{ display:grid; grid-template-columns:1fr; gap:24px; }
 @media (min-width:900px){ .grid-2{ grid-template-columns:1fr 1fr; } }
+/* Header fijo pegado arriba */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(180deg, rgba(7,12,20,.9), rgba(7,12,20,.5));
+  border-bottom: 1px solid var(--line);
+}
+
+/* Alto del header y alineación interna */
+.nav-inner {
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* El main baja para no quedar debajo del header fijo */
+.page {
+  padding-top: var(--nav-h);
+}
+
+/* Logo dimensionable por tokens */
+.logo-img {
+  height: var(--logo-h-m) !important;
+  width: auto !important;
+}
+@media (min-width: 900px){
+  .logo-img { height: var(--logo-h-d) !important; }
+}
